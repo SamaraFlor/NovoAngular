@@ -1,64 +1,11 @@
-<h1 class="text sucess text-center">Projeto Angular</h1>
 
-<div [ngStyle]="{background: count < 5? 'red': 'green'}"
-      [ngClass]="{custom: count > 5 }">
-<h2 class="text-center">Contador: {{count}} </h2>
+
+<div class="container my-5">
+<div class="row d-flex align-item-center justify-content-center">
+  <h2 class="text-center">LISTAGEM DE PERSONAGEM RICK AND MORTY</h2>
+  <div class="col- 12">
+  <app-list-api></app-list-api>
 </div>
-
-<h2 class="text-center" *ngIf="count > 7;else menor ">Contador passou de 7</h2>
-<ng-template #menor>
-  <h2 class="text-center">O contador é menor que 7</h2>
-</ng-template>
-
-<ul [ngSwitch]="count" class="list-group mx-auto col-3">
-<li class="list-group-item" *ngSwitchCase="1">
-  E igual a a 1
-</li>
-<li class="list-group-item" *ngSwitchCase="2">
-  E igual  a 2
-</li>
-<li class="list-group-item" *ngSwitchCase="3">
-  E igual  a 3
-</li>
-<li class="list-group-item" *ngSwitchCase="4">
-  E igual  a 4
-</li>
-<li class="list-group-item" *ngSwitchCase="5">
-  E igual  a 5
-</li>
-<li class="list-group-item" *ngSwitchCase="6">
-  E igual  a 6
-</li>
-<li class="list-group-item" *ngSwitchCase="7">
-  E igual  a 7
-</li>
-<li class="list-group-item" *ngSwitchCase="8">
-  E igual  a 8
-</li>
-<li class="list-group-item" *ngSwitchCase="9">
-  E igual  a 9
-</li>
-<li class="list-group-item" *ngSwitchDefault="">
- Este e o default
-</li>
-</ul>
-
-<ul  class="list-group mx-auto col-3">
-  <li class="list-group-item"
-     *ngFor="let pessoa of pessoas">
-    o nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}
-   </li>
-</ul>
-
-<div  class="col-2 mx-auto">
-<h3 appMarcaTexto corDeFundo ="blue" corDoTexto ="black">{{nome}}</h3>
-<button class="btn btn-sucess  col-12 mx-auto"(click)="clicou('Samara Flor')"> Clique aqui </button>
 </div>
-
-<div class="col-4 mx-auto">
-  <input type="text" class="form-control"
-         placeholder="Digite"
-         [(ngModel)]="text">
-  <h4 class="col-6 mx-auto">Saida:{{text}} </h4>
 </div>
 
